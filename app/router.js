@@ -1,7 +1,5 @@
 import Vue from 'nativescript-vue'
 import VueRouter from 'vue-router'
-import FirstPage from '@/components/pages/FirstPage.vue'
-import SecondPage from '@/components/pages/SecondPage.vue'
 
 Vue.use(VueRouter)
 
@@ -17,12 +15,14 @@ export default new VueRouter({
         {
           path: 'first',
           name: 'first',
-          component: FirstPage
+          component: () => import('@/components/pages/FirstPage.vue')
+          // component: FirstPage
         },
         {
           path: 'second',
           name: 'second',
-          component: SecondPage
+          component: () => import('@/components/pages/SecondPage.vue')
+          // component: SecondPage
         }
       ]
     },
