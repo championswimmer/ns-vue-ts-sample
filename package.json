@@ -14,23 +14,26 @@
     }
   },
   "scripts": {
+    "clean-run:android": "tns run android --bundle --clean",
+    "clean-run:ios": "tns run ios --bundle --clean",
     "run:android": "tns run android --bundle",
     "run:ios": "tns run ios --bundle",
-    "watch:android": "tns run android --bundle --env.hmr",
-    "watch:ios": "tns run ios --bundle --env.hmr",
-    "build:android": "tns build android --bundle --env.production",
-    "build:ios": "tns build ios --bundle --env.production"
+    "watch:android": "tns run android --bundle --hmr",
+    "watch:ios": "tns run ios --bundle --hmr",
+    "build:android": "tns build android --bundle --production",
+    "build:ios": "tns build ios --bundle --production"
   },
   "dependencies": {
-    "vuex": "^3.0.1",
     "@vue/devtools": "5.0.0-beta.3",
     "nativescript-socket.io": "^0.9.0",
-    "nativescript-vue-devtools": "^1.0.0",
+    "nativescript-theme-core": "^1.0.4",
     "nativescript-toast": "^1.4.6",
     "nativescript-ui-sidedrawer": "^4.3.0",
-    "nativescript-theme-core": "^1.0.4",
     "nativescript-vue": "^2.0.0",
-    "tns-core-modules": "^4.2.0"
+    "nativescript-vue-devtools": "^1.0.0",
+    "tns-core-modules": "^4.2.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

@@ -1,6 +1,7 @@
 import Vue from 'nativescript-vue'
-import App from './components/App'
 import VueDevtools from 'nativescript-vue-devtools'
+
+import router from './router'
 
 if(TNS_ENV !== 'production') {
   Vue.use(VueDevtools)
@@ -10,6 +11,9 @@ Vue.config.silent = (TNS_ENV === 'production')
 
 Vue.registerElement('RadSideDrawer', () => require('nativescript-ui-sidedrawer').RadSideDrawer)
 
+router.replace('/')
 new Vue({
-  render: h => h('frame', [h(App)])
+  router,
+  template: `<Frame><router-view/></Frame>`,
+  // render: h => h('frame', [h(App)])
 }).$start()

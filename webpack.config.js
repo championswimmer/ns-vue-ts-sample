@@ -40,10 +40,10 @@ module.exports = env => {
             appResourcesPath = "app/App_Resources",
 
             // You can provide the following flags when running 'tns run android|ios'
-            snapshot, // --env.snapshot
-            production, // --env.production
-            report, // --env.report
-            hmr, // --env.hmr
+            snapshot, // --snapshot
+            production, // --production
+            report, // --report
+            hmr, // --hmr
     } = env;
 
     const externals = (env.externals || []).map((e) => { // --env.externals
@@ -260,6 +260,7 @@ module.exports = env => {
     }
 
     if (hmr) {
+        console.log("Using HMR (hot module replacement) as --env.hmr was passed")
         config.plugins.push(new webpack.HotModuleReplacementPlugin());
     }
 
