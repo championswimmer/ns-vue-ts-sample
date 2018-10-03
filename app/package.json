@@ -1,0 +1,8 @@
+{
+  "android": {
+    "v8Flags": "--expose_gc"
+  },
+  "main": "main",
+  "name": "ns-vue-ts-sample",
+  "version": "0.1.0"
+}
