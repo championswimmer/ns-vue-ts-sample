@@ -1,5 +1,6 @@
 import Vue from 'nativescript-vue'
 import VueDevtools from 'nativescript-vue-devtools'
+import SideDrawerApp from '@/components/SideDrawerApp.vue'
 
 import router from './router'
 
@@ -11,9 +12,10 @@ Vue.config.silent = (TNS_ENV === 'production')
 
 Vue.registerElement('RadSideDrawer', () => require('nativescript-ui-sidedrawer').RadSideDrawer)
 
-router.replace('/')
+router.replace('/third')
 new Vue({
   router,
-  template: `<Frame><router-view/></Frame>`,
+  render: h => h(SideDrawerApp)
+  // template: `<Frame><router-view/></Frame>`,
   // render: h => h('frame', [h(App)])
 }).$start()

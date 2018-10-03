@@ -27,6 +27,12 @@ export default new VueRouter({
       ]
     },
     {
+      path: '/third',
+      name: 'third',
+      component: () => import('@/components/pages/ThirdPage.vue')
+      // component: SecondPage
+    },
+    {
       path: '*', redirect: '/'
     }
   ]
