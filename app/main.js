@@ -1,6 +1,7 @@
 import Vue from 'nativescript-vue'
 import VueDevtools from 'nativescript-vue-devtools'
 import SideDrawerApp from '@/components/SideDrawerApp.vue'
+import * as application from 'tns-core-modules/application'
 
 import router from './router'
 
@@ -12,7 +13,7 @@ Vue.config.silent = (TNS_ENV === 'production')
 
 Vue.registerElement('RadSideDrawer', () => require('nativescript-ui-sidedrawer').RadSideDrawer)
 
-router.replace('/third')
+router.replace('/sda')
 new Vue({
   router,
   render: h => h(SideDrawerApp)

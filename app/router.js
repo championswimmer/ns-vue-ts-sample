@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import App from '@/components/App.vue'
+import SideDrawerApp from '@/components/SideDrawerApp.vue'
 
 export default new VueRouter({
   routes: [
@@ -27,10 +28,10 @@ export default new VueRouter({
       ]
     },
     {
-      path: '/third',
-      name: 'third',
-      component: () => import('@/components/pages/ThirdPage.vue')
-      // component: SecondPage
+      path: '/sda',
+      name: 'sda',
+      component: () => import('@/components/pages/ThirdPage.vue'),
+
     },
     {
       path: '*', redirect: '/'

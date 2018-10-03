@@ -8,7 +8,7 @@
     </ActionBar>
 
     <StackLayout>
-      <Label text="Some Text"></Label>
+      <Label text="Some Text at 3"></Label>
       <router-view></router-view>
     </StackLayout>
   </Page>

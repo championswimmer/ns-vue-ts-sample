@@ -5,7 +5,7 @@
 
             <Button @tap="$router.replace('/first')" class="drawer-item" text="Item 1"/>
             <Button @tap="$router.replace('/second')" class="drawer-item" text="Item 2"/>
-            <Button @tap="$router.replace('/third')" class="drawer-item" text="Item 3"/>
+            <Button @tap="$router.replace('/sda')" class="drawer-item" text="Item 3"/>
         </StackLayout>
         <Frame ~mainContent>
             <router-view></router-view>
