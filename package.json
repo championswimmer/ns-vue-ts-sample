@@ -16,8 +16,10 @@
   "scripts": {
     "run:android": "tns run android --bundle",
     "run:ios": "tns run ios --bundle",
-    "build:android": "tns build android --bundle",
-    "build:ios": "tns build ios --bundle"
+    "watch:android": "tns run android --bundle --env.hmr",
+    "watch:ios": "tns run ios --bundle --env.hmr",
+    "build:android": "tns build android --bundle --env.production",
+    "build:ios": "tns build ios --bundle --env.production"
   },
   "dependencies": {
     "vuex": "^3.0.1",
